@@ -26,3 +26,12 @@ File "pandas/_libs/lib.pyx", line 3071, in pandas._libs.lib.map_infer
 CSV ↔ PostgreSQL Error:
 This safety build limits full-table comparison to 250,000 rows. Use a filtered workflow for larger tables.
 
+
+
+
+
+
+
+Execution failed on sql 'SELECT * FROM "CustomerProfile"."LoyaltyProfile" ORDER BY "MembershipIdentifier", "LoyaltyProgramCarrierCode" LIMIT :n OFFSET :o': (psycopg2.OperationalError) SSL error: unexpected eof while reading
+
+[SQL: SELECT * FROM "CustomerProfile"."LoyaltyProfile" ORDER BY "MembershipIdentifier", "LoyaltyProgramCarrierCode" LIMIT %(n)s OFFSET %(o)s] [parameters: {'n': 50000, 'o': 350000}] (Background on this error at: https://sqlalche.me/e/20/e3q8)
