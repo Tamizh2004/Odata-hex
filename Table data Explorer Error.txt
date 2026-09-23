@@ -1,0 +1,28 @@
+Table data Explorer Error:
+
+TypeError: object of type 'float' has no len()
+Traceback:
+File "C:\Users\2000195767\Downloads\enterprise_reconciliation_framework_OperationsDataMart_v10\enterprise_reconciliation_framework_v10\app\app.py", line 990, in <module>
+    dl(df, "Export Excel", "table_page.xlsx", "xlsx")
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "C:\Users\2000195767\Downloads\enterprise_reconciliation_framework_OperationsDataMart_v10\enterprise_reconciliation_framework_v10\app\app.py", line 805, in dl
+    sample = safe[col].astype(str).head(100).map(len).max() if len(safe) else 0
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+File "C:\.erf_venv\Lib\site-packages\pandas\core\series.py", line 4675, in map
+    new_values = self._map_values(func, na_action=na_action)
+File "C:\.erf_venv\Lib\site-packages\pandas\core\base.py", line 1020, in _map_values
+    return arr.map(mapper, na_action=na_action)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "C:\.erf_venv\Lib\site-packages\pandas\core\arrays\arrow\array.py", line 1827, in map
+    return super().map(mapper, na_action)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+File "C:\.erf_venv\Lib\site-packages\pandas\core\arrays\base.py", line 2745, in map
+    return map_array(self, mapper, na_action=na_action)
+File "C:\.erf_venv\Lib\site-packages\pandas\core\algorithms.py", line 1715, in map_array
+    return lib.map_infer(values, mapper)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+File "pandas/_libs/lib.pyx", line 3071, in pandas._libs.lib.map_infer
+
+CSV ↔ PostgreSQL Error:
+This safety build limits full-table comparison to 250,000 rows. Use a filtered workflow for larger tables.
+
